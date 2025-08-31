@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URC Hotel – Room Booking Management (HTML Only)</title>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <table border="1" width="100%" cellpadding="10" cellspacing="0">
+    <tr bgcolor="#d3d3d3">
+      <td><b>URC Hotel</b></td>
+      <td align="center"><a href="#intro">Home</a></td>
+      <td align="center"><a href="#rooms">Rooms</a></td>
+      <td align="center"><a href="#book">Book Now</a></td>
+      <td align="center"><a href="#reservations">Reservations</a></td>
+      <td align="center"><a href="#about">About</a></td>
+      <td align="center"><a href="#contact">Contact</a></td>
+    </tr>
+  </table>
+  <hr>
+
+  <!-- Intro -->
+  <h1 id="intro">Welcome to URC Hotel</h1>
+  <p>We provide world‑class accommodation with a blend of luxury, comfort, and tradition. This is a Room Booking Management System built only with HTML tags.</p>
+  <hr>
+
+  <!-- About -->
+  <h2 id="about">About Us</h2>
+  <p>URC Hotel is located in Erode, Tamil Nadu. We offer premium hospitality services with Standard, Deluxe, and Suite rooms. Our amenities include free Wi‑Fi, complimentary breakfast, 24x7 support, and easy online booking.</p>
+  <ul>
+    <li>Check‑in Time: 12:00 PM</li>
+    <li>Check‑out Time: 11:00 AM</li>
+    <li>24x7 Room Service</li>
+    <li>Conference Hall & Banquet Facilities</li>
+    <li>In‑house Restaurant</li>
+  </ul>
+  <hr>
+
+  <!-- Room Types -->
+  <h2 id="rooms">Room Types</h2>
+  <table border="1" cellpadding="8" cellspacing="0" width="100%">
+    <caption><b>Available Rooms</b></caption>
+    <thead>
+      <tr bgcolor="#f0f0f0">
+        <th>Type</th>
+        <th>Occupancy</th>
+        <th>Bed</th>
+        <th>Base Price / Night</th>
+        <th>Inclusions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Standard</td>
+        <td>2 Adults</td>
+        <td>Queen</td>
+        <td>₹2,999</td>
+        <td>Wi‑Fi, TV</td>
+      </tr>
+      <tr>
+        <td>Deluxe</td>
+        <td>3 Adults</td>
+        <td>King</td>
+        <td>₹4,499</td>
+        <td>Wi‑Fi, TV, Breakfast</td>
+      </tr>
+      <tr>
+        <td>Suite</td>
+        <td>4 Adults</td>
+        <td>King + Sofa Bed</td>
+        <td>₹6,999</td>
+        <td>Wi‑Fi, TV, Breakfast, Lounge Access</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+
+  <!-- Booking Form -->
+  <h2 id="book">Book a Room</h2>
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Guest Information</legend>
+      <label for="fullname">Full Name:</label><br>
+      <input id="fullname" name="fullname" type="text" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input id="email" name="email" type="email" required><br><br>
+
+      <label for="phone">Phone:</label><br>
+      <input id="phone" name="phone" type="tel" required>
+    </fieldset>
+    <br>
+
+    <fieldset>
+      <legend>Booking Details</legend>
+      <label for="roomtype">Room Type:</label><br>
+      <select id="roomtype" name="roomtype" required>
+        <option value="">-- Select --</option>
+        <option value="standard">Standard</option>
+        <option value="deluxe">Deluxe</option>
+        <option value="suite">Suite</option>
+      </select><br><br>
+
+      <label for="checkin">Check‑in Date:</label><br>
+      <input id="checkin" name="checkin" type="date" required><br><br>
+
+      <label for="checkout">Check‑out Date:</label><br>
+      <input id="checkout" name="checkout" type="date" required><br><br>
+
+      <label for="guests">Number of Guests:</label><br>
+      <input id="guests" name="guests" type="number" min="1" max="6" value="2" required><br><br>
+
+      <label for="requests">Special Requests:</label><br>
+      <textarea id="requests" name="requests" rows="4" cols="40"></textarea>
+    </fieldset>
+    <br>
+
+    <fieldset>
+      <legend>Payment Preference</legend>
+      <label><input type="radio" name="payment" value="pay-at-hotel" checked> Pay at Hotel</label><br>
+      <label><input type="radio" name="payment" value="upi"> UPI</label><br>
+      <label><input type="radio" name="payment" value="card"> Credit/Debit Card</label>
+    </fieldset>
+    <br>
+
+    <p><input type="checkbox" id="terms" name="terms" required> <label for="terms">I agree to the terms and conditions.</label></p>
+
+    <p>
+      <button type="submit">Submit Booking Request</button>
+      <button type="reset">Clear Form</button>
+    </p>
+  </form>
+  <hr>
+
+  <!-- Reservations -->
+  <h2 id="reservations">My Reservations</h2>
+  <p>Sample list of reservations:</p>
+  <table border="1" cellpadding="8" cellspacing="0" width="100%">
+    <thead>
+      <tr bgcolor="#f0f0f0">
+        <th>Booking ID</th>
+        <th>Name</th>
+        <th>Room</th>
+        <th>Check‑in</th>
+        <th>Check‑out</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>URC10231</td>
+        <td>Sample Guest</td>
+        <td>Deluxe</td>
+        <td>2025‑08‑18</td>
+        <td>2025‑08‑20</td>
+        <td>Confirmed</td>
+      </tr>
+      <tr>
+        <td>URC10274</td>
+        <td>Another Guest</td>
+        <td>Standard</td>
+        <td>2025‑09‑01</td>
+        <td>2025‑09‑03</td>
+        <td>Pending</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+
+  <!-- Contact -->
+  <h2 id="contact">Contact</h2>
+  <address>
+    URC Hotel, Main Road, Erode, Tamil Nadu, India<br>
+    Phone: +91‑12345‑67890<br>
+    Email: bookings@urchotel.example
+  </address>
+
+  <hr>
+  <p align="center">© 2025 URC Hotel. Demo page for educational use.</p>
+</body>
+</html>
+
